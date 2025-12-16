@@ -42,8 +42,8 @@ class _DifficultySelectionState extends State<DifficultySelection> {
                 onEnter: (_) => setState(() => _classicHovered = true),
                 onExit: (_) => setState(() => _classicHovered = false),
                 child: SizedBox(
-                  width: 200,
-                  height: 200,
+                  width: 160,
+                  height: 160,
                   child: Stack(
                     alignment: Alignment.center,
                     children: [
@@ -77,8 +77,8 @@ class _DifficultySelectionState extends State<DifficultySelection> {
                 onEnter: (_) => setState(() => _hardHovered = true),
                 onExit: (_) => setState(() => _hardHovered = false),
                 child: SizedBox(
-                  width: 200,
-                  height: 200,
+                  width: 160,
+                  height: 160,
                   child: Stack(
                     alignment: Alignment.center,
                     children: [
