@@ -5,6 +5,7 @@ class GameState {
   final List<int> playerMoves;
   final int score;
   final bool gameOver;
+  final String? gameOverReason;
   final bool showingSequence;
   final int? highlightedIndex;
   final int? tappedIndex;
@@ -15,6 +16,7 @@ class GameState {
     this.playerMoves = const [],
     this.score = 0,
     this.gameOver = false,
+    this.gameOverReason,
     this.showingSequence = false,
     this.highlightedIndex,
     this.tappedIndex,
@@ -26,6 +28,7 @@ class GameState {
     List<int>? playerMoves,
     int? score,
     bool? gameOver,
+    String? gameOverReason,
     bool? showingSequence,
     Object? highlightedIndex = _keepValue,
     Object? tappedIndex = _keepValue,
@@ -36,6 +39,7 @@ class GameState {
       playerMoves: playerMoves ?? this.playerMoves,
       score: score ?? this.score,
       gameOver: gameOver ?? this.gameOver,
+      gameOverReason: gameOverReason ?? this.gameOverReason,
       showingSequence: showingSequence ?? this.showingSequence,
       highlightedIndex: highlightedIndex == _keepValue
           ? this.highlightedIndex
