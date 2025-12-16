@@ -76,7 +76,10 @@ class _GameModeClassicState extends State<GameModeClassic> {
   }
 
   void _showGameOverDialog(
-      BuildContext context, ClassicGameViewModel viewModel, int score) {
+    BuildContext context,
+    ClassicGameViewModel viewModel,
+    int score,
+  ) {
     showDialog(
       context: context,
       barrierDismissible: false,
@@ -95,8 +98,11 @@ class _GameModeClassicState extends State<GameModeClassic> {
             ),
             TextButton(
               onPressed: () {
-                Navigator.of(context).pop();
+                Navigator.of(context).pop(); // this pops the dialog
                 _dialogShown = false;
+
+                // Now pop the current page (same as AppBar back button)
+                Navigator.of(context).maybePop();
               },
               child: const Text("Close"),
             ),
@@ -106,4 +112,3 @@ class _GameModeClassicState extends State<GameModeClassic> {
     );
   }
 }
-

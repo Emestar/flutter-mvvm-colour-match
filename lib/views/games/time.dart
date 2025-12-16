@@ -139,8 +139,11 @@ class _GameModeTimeState extends State<GameModeTime> {
           ),
           TextButton(
             onPressed: () {
-              Navigator.of(context).pop();
+              Navigator.of(context).pop(); // this pops the dialog
               _dialogShown = false;
+
+              // Now pop the current page (same as AppBar back button)
+              Navigator.of(context).maybePop();
             },
             child: const Text("Close"),
           ),
