@@ -30,10 +30,11 @@ class _GameModeTimeState extends State<GameModeTime> {
             WidgetsBinding.instance.addPostFrameCallback((_) {
               if (mounted && !_dialogShown) {
                 _dialogShown = true;
-                final reason = viewModel.timeLeft <= 0
-                    ? "Time's up!"
-                    : "Incorrect sequence.";
-                _showGameOverDialog(context, viewModel, reason);
+                _showGameOverDialog(
+                  context,
+                  viewModel,
+                  state.gameOverReason ?? "Test",
+                );
               }
             });
           } else if (!state.gameOver) {

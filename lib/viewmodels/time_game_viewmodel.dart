@@ -47,6 +47,7 @@ class TimeGameViewModel extends BaseGameViewModel {
         sequence: [],
         playerMoves: [],
         gameOver: false,
+        gameOverReason: null,
         showingSequence: false,
         palette: state.palette,
       ),
@@ -109,7 +110,7 @@ class TimeGameViewModel extends BaseGameViewModel {
   void _handleTimeExpired() {
     if (state.gameOver) return;
     updateState(state.copyWith(gameOver: true));
-    notifyListeners();
+    onTimeExpired();
   }
 
   @override
@@ -126,7 +127,7 @@ class TimeGameViewModel extends BaseGameViewModel {
 
     if (newPlayerMoves.last != state.sequence[newPlayerMoves.length - 1]) {
       updateState(state.copyWith(gameOver: true));
-      notifyListeners();
+      onIncorrectSequence();
       return;
     }
 
@@ -148,5 +149,17 @@ class TimeGameViewModel extends BaseGameViewModel {
   void dispose() {
     _roundTimer?.cancel();
     super.dispose();
+  }
+
+  void onTimeExpired() {
+    updateState(state.copyWith(gameOver: true, gameOverReason: "Time's up!"));
+    notifyListeners();
+  }
+
+  void onIncorrectSequence() {
+    updateState(
+      state.copyWith(gameOver: true, gameOverReason: "Incorrect sequence."),
+    );
+    notifyListeners();
   }
 }
