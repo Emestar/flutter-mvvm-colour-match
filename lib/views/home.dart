@@ -20,7 +20,7 @@ class HomePage extends StatelessWidget {
           backgroundColor: Colors.transparent,
           elevation: 0,
           title: const Text(
-            'Color Match',
+            'Colour Match',
             style: TextStyle(color: ktextcolor, fontSize: 48),
           ),
           flexibleSpace: Container(
@@ -79,4 +79,3 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-

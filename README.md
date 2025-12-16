@@ -1,17 +1,17 @@
-# Color Match
+# Colour Match
 
 ![Capture d'écran de l'application](screenshots/app_screenshot.png)
 ![Capture d'écran de l'application](https://github.com/Emestar/flutter-mvvm-colour-match/blob/main/screenshots/app_screenshot.png)
 
 ## a. En-tête du projet
 
-**Color Match** est une application mobile de jeu de mémoire et de correspondance de couleurs développée avec Flutter. L'application propose plusieurs modes de jeu pour tester et améliorer votre mémoire visuelle et auditive.
+**Colour Match** est une application mobile de jeu de mémoire et de correspondance de couleurs développée avec Flutter. L'application propose plusieurs modes de jeu pour tester et améliorer votre mémoire visuelle et auditive.
 
 ## b. Description
 
 ### À quoi sert l'application ?
 
-Color Match est un jeu de mémoire où le joueur doit reproduire une séquence de couleurs qui s'allument et produisent des sons. L'application combine la mémoire visuelle et auditive pour créer une expérience de jeu engageante.
+Colour Match est un jeu de mémoire où le joueur doit reproduire une séquence de couleurs qui s'allument et produisent des sons. L'application combine la mémoire visuelle et auditive pour créer une expérience de jeu engageante.
 
 ### Fonctionnalités principales
 
