@@ -24,18 +24,18 @@ class _GameModeInfinityState extends State<GameModeInfinity> {
           final state = viewModel.state;
 
           // Show snackbar for mistakes
-          if (viewModel.mistakes > 0 &&
-              state.playerMoves.isEmpty &&
-              !state.showingSequence) {
-            WidgetsBinding.instance.addPostFrameCallback((_) {
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(
-                  content: Text("Error #${viewModel.mistakes} - try again!"),
-                  duration: const Duration(seconds: 1),
-                ),
-              );
-            });
-          }
+          // if (viewModel.mistakes > 0 &&
+          //     state.playerMoves.isEmpty &&
+          //     !state.showingSequence) {
+          //   WidgetsBinding.instance.addPostFrameCallback((_) {
+          //     ScaffoldMessenger.of(context).showSnackBar(
+          //       SnackBar(
+          //         content: Text("Error #${viewModel.mistakes} - try again!"),
+          //         duration: const Duration(seconds: 1),
+          //       ),
+          //     );
+          //   });
+          // }
 
           return GradientBackground(
             child: Scaffold(

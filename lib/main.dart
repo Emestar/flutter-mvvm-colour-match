@@ -10,6 +10,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: 'Colour Match', home: const HomePage());
+    return MaterialApp(
+      title: 'Colour Match',
+      home: const HomePage(),
+      debugShowCheckedModeBanner: false,
+    );
   }
 }
